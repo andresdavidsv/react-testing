@@ -10,12 +10,17 @@ const UserForm = ({ onUserAdd }) => {
   return (
     <form onSubmit={handleSumbit}>
       <div>
-        <label>Name: </label>
-        <input value={name} onChange={({ target }) => setName(target.value)} />
+        <label htmlFor="name">Name: </label>
+        <input
+          id="name"
+          value={name}
+          onChange={({ target }) => setName(target.value)}
+        />
       </div>
       <div>
-        <label>Email: </label>
+        <label htmlFor="email">Enter Email: </label>
         <input
+          id="email"
           value={email}
           onChange={({ target }) => setEmail(target.value)}
         />
