@@ -6,6 +6,8 @@ const UserForm = ({ onUserAdd }) => {
   const handleSumbit = (event) => {
     event.preventDefault();
     onUserAdd({ name, email });
+    setEmail('');
+    setName('');
   };
   return (
     <form onSubmit={handleSumbit}>
